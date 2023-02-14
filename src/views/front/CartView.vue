@@ -36,11 +36,6 @@
                     @change="updateCart(item)">
                     <option :value="i" v-for="i in 10" :key="`${i}111`">{{ i }}</option>
                     </select>
-                    <!-- <div class="input-group mb-3">
-                    <input
-                            min="1" type="number" class="form-control">
-                    <span class="input-group-text" id="basic-addon2">{{  }}</span>
-                    </div> -->
                 </div>
                 </td>
                 <td class="text-end">
@@ -70,16 +65,11 @@ export default {
   data () {
     return {
       products: [],
-      productId: '',
       cart: {},
       loadingItem: ''
     }
   },
   methods: {
-    // openModal (id) {
-    //   this.productId = id
-    //   console.log('外部ID', id)
-    // },
     getCarts () {
       this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`)
         .then(res => {

@@ -32,7 +32,6 @@ export default {
     getProducts () {
       this.$http.get(`${VITE_APP_URL}/api/${VITE_APP_PATH}/products/all`)
         .then((res) => {
-          console.log(res)
           this.products = res.data.products
         })
         .catch((error) => {
@@ -47,8 +46,6 @@ export default {
       this.$http.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
         .then((res) => {
           console.log('加入購物車', res.data)
-          // this.$refs.productModal.hide()
-          // this.getCarts()
         })
     }
   },
