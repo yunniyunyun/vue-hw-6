@@ -45,7 +45,7 @@ export default {
       }
       this.$http.post(`${VITE_APP_URL}/api/${VITE_APP_PATH}/cart`, { data })
         .then((res) => {
-          console.log('加入購物車', res.data)
+          alert('加入購物車', res.data.message)
         })
     }
   },
